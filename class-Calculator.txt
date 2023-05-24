@@ -1,0 +1,52 @@
+class Calculator 
+{
+  
+  int calculate( operation, x, y) {
+   switch(operation)
+   {
+     case "+":
+     case "plus":
+       return addTwoNum(x, y); 
+     case "/":
+     case "division":
+       return divTwoNum(x, y); 
+     case "*":
+     case "times":
+       return multiplyTwoNum(x, y); 
+     case "-":
+     case "subtract":
+       return subTwoNum(x, y);
+     default:
+       return 0;
+   }
+ }
+  
+  int addTwoNum(int x, int y) 
+  {
+    return x + y;
+  }
+  
+  int divTwoNum  (int x, int y) 
+  {
+    return (x / y).round();
+  }
+  
+  int multiplyTwoNum  (int x, int y) 
+  {
+    return x * y;
+  }
+  
+  int subTwoNum (int x, int y) 
+  {
+    return x - y;
+  }
+}
+
+
+void main() {
+  Calculator calc = Calculator();
+  print(calc.calculate("+", 4, 2));
+  print(calc.calculate("multiply", 4, 2));
+  print(calc.calculate("divide", 4, 2));
+  print(calc.calculate("subtract", 4, 2));
+}
